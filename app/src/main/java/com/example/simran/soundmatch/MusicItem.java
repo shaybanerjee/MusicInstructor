@@ -7,4 +7,5 @@ package com.example.simran.soundmatch;
 public class MusicItem {
     String note;
     double freq;
+    int duration;
 }

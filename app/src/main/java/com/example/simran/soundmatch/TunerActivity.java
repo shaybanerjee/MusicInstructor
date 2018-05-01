@@ -13,6 +13,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Console;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +58,7 @@ public class TunerActivity extends AppCompatActivity {
             try {
                 JSONObject jsonObj = new JSONObject(data);
                 parts = jsonObj.getJSONArray("parts");
+
             } catch (JSONException e) {
                 Log.e("ORDERS_JSON", "JSON Error while obtaining orders", e);
             }
