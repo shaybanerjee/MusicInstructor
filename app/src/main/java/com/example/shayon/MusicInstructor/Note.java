@@ -1,4 +1,4 @@
-package com.example.simran.soundmatch;
+package com.example.shayon.MusicInstructor;
 
 import org.json.JSONObject;
 
@@ -104,7 +104,7 @@ public class Note implements Serializable {
     //The name of the note
     private String note;
     //The closest note frequency to the frequency provided in the constructor
-    private double frequency;
+    public double frequency;
     //The frequency provided to the constructor when making an instance of this object
     private double actualFrequency;
     //As in 4 for A4

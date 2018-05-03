@@ -1,4 +1,4 @@
-package com.example.simran.soundmatch;
+package com.example.shayon.MusicInstructor;
 
 import android.Manifest;
 import android.os.Bundle;
@@ -8,7 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.simran.soundmatch.utils.PermissionUtils;
+import com.example.simran.soundmatch.R;
+import com.example.shayon.MusicInstructor.utils.PermissionUtils;
 
 public class TunerFragment extends Fragment {
     public static final String TAG = TunerFragment.class.getSimpleName();

@@ -1,4 +1,4 @@
-package com.example.simran.soundmatch;
+package com.example.shayon.MusicInstructor;
 
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
@@ -9,11 +9,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.widget.Toast;
 
+import com.example.simran.soundmatch.R;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.Console;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -78,6 +79,7 @@ public class TunerActivity extends AppCompatActivity {
                         MusicItem wMusicItem = new MusicItem();
                         wMusicItem.note = noteInfo.getString("noteName");
                         wMusicItem.freq = noteInfo.getDouble("freq");
+                        wMusicItem.duration = noteInfo.getString("duration");
                         wListMusic.add(wMusicItem);
                     } catch (JSONException E) {
                         throw new RuntimeException(E);

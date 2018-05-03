@@ -1,4 +1,4 @@
-package com.example.simran.soundmatch.utils;
+package com.example.shayon.MusicInstructor.utils;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;

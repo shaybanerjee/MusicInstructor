@@ -1,4 +1,4 @@
-package com.example.simran.soundmatch;
+package com.example.shayon.MusicInstructor;
 
 /**
  * Created by Simran on 2017-09-17.
@@ -7,5 +7,5 @@ package com.example.simran.soundmatch;
 public class MusicItem {
     String note;
     double freq;
-    int duration;
+    String duration;
 }

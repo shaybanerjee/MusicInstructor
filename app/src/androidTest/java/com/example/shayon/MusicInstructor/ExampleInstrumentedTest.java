@@ -1,4 +1,4 @@
-package com.example.simran.soundmatch;
+package com.example.shayon.MusicInstructor;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
