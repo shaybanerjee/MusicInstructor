@@ -1,4 +1,4 @@
-package com.example.simran.soundmatch;
+package com.example.simran.SoundMatch;
 
 import org.junit.Test;
 

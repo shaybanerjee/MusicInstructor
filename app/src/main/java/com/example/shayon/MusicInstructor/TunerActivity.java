@@ -3,13 +3,14 @@ package com.example.shayon.MusicInstructor;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.Toast;
 
-import com.example.simran.soundmatch.R;
+import com.example.shayon.MusicInstructor.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,6 +31,7 @@ public class TunerActivity extends AppCompatActivity {
     private boolean showCancel;
     private String data = null;
     private JSONArray parts = null;
+
 
     private class FetchDataTask extends AsyncTask<String, Void, JSONArray> {
 
@@ -123,7 +125,7 @@ public class TunerActivity extends AppCompatActivity {
                         tunerFragment.init();
                     }
                 }else if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_DENIED){
-                    Toast.makeText(TunerActivity.this, "SoundMatch needs access to the microphone to function.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(TunerActivity.this, "Music Instructor needs access to the microphone to function.", Toast.LENGTH_LONG).show();
                     TunerActivity.this.finish();
                 }
                 break;

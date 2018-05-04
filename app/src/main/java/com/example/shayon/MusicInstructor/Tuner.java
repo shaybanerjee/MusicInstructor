@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.example.shayon.MusicInstructor.tarsos.PitchDetectionResult;
 import com.example.shayon.MusicInstructor.tarsos.Yin;
 import com.example.shayon.MusicInstructor.utils.AudioUtils;
-import com.example.simran.soundmatch.R;
+import com.example.shayon.MusicInstructor.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -347,8 +347,11 @@ public class Tuner {
                                                         ((Activity) mContext).findViewById(R.id.background);
                                                 LinearLayout tunerView = (LinearLayout)
                                                         ((Activity) mContext).findViewById(R.id.tuner_view);
-                                                tunerView.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
-                                                backgroundView.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
+
+                                                tunerView.setBackgroundResource(R.drawable.main_background);
+                                                backgroundView.setBackgroundResource(R.drawable.main_background);
+                                                //tunerView.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
+                                                //backgroundView.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
                                             }
                                         }, 2000);
                                         ++count;
