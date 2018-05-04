@@ -46,6 +46,8 @@ public class Tuner {
     private int counter = 0;
     long startTime = 0;
     private String[] lastNotes = new String[6];
+    final ArrayList<failedNotes> wFailedNotes = new ArrayList<failedNotes>();
+    Boolean is_counted = false;
 
 
     //provide the tuner view implementing the TunerUpdate to the constructor
@@ -296,19 +298,17 @@ public class Tuner {
     private void findAndPrintNote()
     {
 
-
         while(isRecording){
             final int noteListLength = noteList.size();
             amountRead = audioRecord.read(intermediaryBuffer, 0, readSize);
             buffer = shortArrayToFloatArray(intermediaryBuffer);
             result = yin.getPitch(buffer);
 
-       /*     if (first_run)
+           if (first_run)
             {
                 startTime = System.currentTimeMillis();
                 first_run = false;
-            }*/
-            startTime = System.currentTimeMillis();
+            }
             currentNote.changeTo(result.getPitch());
 
 
@@ -330,7 +330,7 @@ public class Tuner {
                                 return;
                             }
 
-                            if (System.currentTimeMillis() - startTime <= 500) {
+                            if (System.currentTimeMillis() - startTime < 500) {
                                 // compare the notes to array, increment current index
                                 System.out.println(currentNote.getNote());
                                 System.out.println(noteList.get(currIndex).note);
@@ -354,8 +354,7 @@ public class Tuner {
                                                 //backgroundView.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
                                             }
                                         }, 2000);
-                                        ++count;
-                                        first_run = true;
+                                       is_counted = true;
 
 
                                     }
@@ -367,9 +366,21 @@ public class Tuner {
                                     first_run = true;
                                 }
                             }
+                            else if (!is_counted)
+                            {
+                                ++currIndex;
+                                failedNotes fn = new failedNotes();
+                                fn.note_observed = currentNote.getNote();
+                                fn.note_expected = noteList.get(currIndex - 1).note;
+                                fn.song_note = currIndex;
+                                wFailedNotes.add(fn);
+                                first_run = true;
+                                is_counted = false;
+                            }
                             else
                             {
                                 ++currIndex;
+                                ++count;
                                 first_run = true;
                             }
                         }
@@ -391,10 +402,61 @@ public class Tuner {
         TextView txtView = (TextView)
                 ((Activity) mContext).findViewById(R.id.note_text);
 
-        double result = ((double)currIndex / 26) * 100;
-        String s = String.format("%.2f", result);
-        txtView.setText("Congrats, you got " + s + "% correct!");
-        txtView.setTextSize(40);
+        double result = ((double)count / 26) * 100;
+        if (result == 100)
+        {
+            String s = String.format("%.2f", result);
+            txtView.setText("Perfect, you got " + s + "% correct!");
+            txtView.setTextSize(20);
+        }
+        else if (result > 70)
+        {
+            String s = String.format("%.2f", result);
+            txtView.setText("Excellent, you got " + s + "% correct!");
+            txtView.append("\n");
+            txtView.append("Incorrect note analysis: \n");
+            if (wFailedNotes.size() >  0) {
+                for (int i = 0; i < wFailedNotes.size(); ++i) {
+                    txtView.append("Note #" + wFailedNotes.get(i).song_note + " Played: " +
+                            wFailedNotes.get(i).note_observed + ", Expected: "
+                            + wFailedNotes.get(i).note_expected + "\n");
+                }
+            }
+            txtView.setTextSize(20);
+        }
+        else if (result > 50)
+        {
+            String s = String.format("%.2f", result);
+            txtView.setText("Good, you got " + s + "% correct!");
+            txtView.append("\n");
+            if (wFailedNotes.size() >  0) {
+                txtView.append("Incorrect note analysis: \n");
+                for (int i = 0; i < wFailedNotes.size(); ++i) {
+                    txtView.append("Note #" + wFailedNotes.get(i).song_note + " Played: " +
+                            wFailedNotes.get(i).note_observed + ", Expected: "
+                            + wFailedNotes.get(i).note_expected + "\n");
+                }
+            }
+            txtView.setTextSize(20);
+        }
+        else
+        {
+            String s = String.format("%.2f", result);
+            txtView.setText("Keep trying, you got " + s + "% correct!");
+            txtView.append("\n");
+            if (wFailedNotes.size() >  0) {
+                txtView.append("Incorrect note analysis: \n");
+                for (int i = 0; i < wFailedNotes.size(); ++i) {
+                    txtView.append("Note #" + wFailedNotes.get(i).song_note + " Played: " +
+                            wFailedNotes.get(i).note_observed + ", Expected: "
+                            + wFailedNotes.get(i).note_expected + "\n");
+                }
+            }
+            txtView.setTextSize(20);
+        }
+
+
+
     }
 
     private float[] shortArrayToFloatArray(short[] array){
