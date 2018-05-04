@@ -11,16 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="520f7688-de0e-45dd-9995-82e8821dd8c4" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shayon/MusicInstructor/failedNotes.java" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shayon/MusicInstructor/Tuner.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shayon/MusicInstructor/Tuner.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,18 +46,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tuner.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Tuner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shayon/MusicInstructor/Tuner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="412" column="9" lean-forward="false" selection-start-line="412" selection-start-column="9" selection-end-line="412" selection-end-column="9" />
+            <state relative-caret-position="294">
+              <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1676#1689#0" expanded="true" />
-                <element signature="e#13273#17521#0" expanded="true" />
-                <element signature="e#15072#16180#0" expanded="true" />
-                <element signature="e#16179#16180#0" expanded="true" />
-                <element signature="e#17520#17521#0" expanded="true" />
+                <element signature="e#3721#7969#0" expanded="true" />
+                <element signature="e#5520#6628#0" expanded="true" />
+                <element signature="e#6627#6628#0" expanded="true" />
+                <element signature="e#7968#7969#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,7 +139,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tuner_fragment.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tuner_fragment.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tuner_fragment.xml">
           <provider selected="true" editor-type-id="android-designer2">
             <state />
@@ -2525,10 +2515,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1676#1689#0" expanded="true" />
-            <element signature="e#13273#17521#0" expanded="true" />
-            <element signature="e#15072#16180#0" expanded="true" />
-            <element signature="e#16179#16180#0" expanded="true" />
-            <element signature="e#17520#17521#0" expanded="true" />
+            <element signature="e#3721#7969#0" expanded="true" />
+            <element signature="e#5520#6628#0" expanded="true" />
+            <element signature="e#6627#6628#0" expanded="true" />
+            <element signature="e#7968#7969#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2670,10 +2660,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1676#1689#0" expanded="true" />
-            <element signature="e#13273#17521#0" expanded="true" />
-            <element signature="e#15072#16180#0" expanded="true" />
-            <element signature="e#16179#16180#0" expanded="true" />
-            <element signature="e#17520#17521#0" expanded="true" />
+            <element signature="e#3721#7969#0" expanded="true" />
+            <element signature="e#5520#6628#0" expanded="true" />
+            <element signature="e#6627#6628#0" expanded="true" />
+            <element signature="e#7968#7969#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2850,21 +2840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shayon/MusicInstructor/Tuner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="412" column="9" lean-forward="false" selection-start-line="412" selection-start-column="9" selection-end-line="412" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1676#1689#0" expanded="true" />
-            <element signature="e#13273#17521#0" expanded="true" />
-            <element signature="e#15072#16180#0" expanded="true" />
-            <element signature="e#16179#16180#0" expanded="true" />
-            <element signature="e#17520#17521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tuner_activity.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -2884,6 +2859,21 @@
         <state relative-caret-position="289">
           <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shayon/MusicInstructor/Tuner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1676#1689#0" expanded="true" />
+            <element signature="e#3721#7969#0" expanded="true" />
+            <element signature="e#5520#6628#0" expanded="true" />
+            <element signature="e#6627#6628#0" expanded="true" />
+            <element signature="e#7968#7969#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
